@@ -1,0 +1,154 @@
+/* Reset some default styles */
+.wrapper, .footer{
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color:black ;
+    width: 100%;
+    color: white;
+    
+}
+.wrapper{
+    height: 10vh;
+    top: 0;
+}
+.footer{
+    height: 37vh;
+    margin-top: 200px;
+}
+.header-text{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 6px;
+ }
+ .nav-area li{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+
+    
+ }
+ .nav-area li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family:poppins;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    
+ }
+ 
+ .nav-area li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:rgb(192, 178, 27);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+ }
+ .nav-area li:hover::after{
+    width: 100%;
+ }
+
+ .nav-area button{
+    background-color: rgb(192, 178, 27) ;
+    font-weight: bold;
+ }
+ .nav-area button a li{
+    margin-top: 20px;
+ }
+
+ .logo img{
+    float: left;
+    width: 40px;
+    height: auto;
+    margin-left: 90px;
+    
+ }
+ .logo span{
+    color: yellow;
+    font-size: 20px;
+    
+
+ }
+
+body, h1, h2 {
+    margin: 0;
+    padding: 0;
+  
+}
+
+body{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/IMAGES/man.jpg");
+    background-size:cover;
+    background-position: absolute;
+    
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+   margin-top: 270px;
+}
+
+/* Header styles */
+h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+a.view-employers-button,
+a.view-employees-button,
+a.log-out-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.view-employers-button:hover,
+a.view-employees-button:hover,
+a.log-out-button:hover {
+    background-color: #0056b3;
+}
+
+.footer-features{
+display: flex;
+margin-left: 400px;
+}
+
+.services{
+    margin-left: 200px;
+}
+
+.socials{
+    margin-left: 200px;
+}
+.team{
+    color: #fff;
+    text-align: center;
+    
+}

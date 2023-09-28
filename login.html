@@ -1,0 +1,121 @@
+<?php
+//Start session so as to make use of session on this page
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/STYLE/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <img src="/IMAGES/logo.png">
+                    <div class="header-text"><span>SWIFT</span>HIRE
+                    </div> 
+                </div>
+                <ul class="nav-area">
+                    
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Candidates</a></li>
+                    <li><a href="#">Employers</a></li>
+                    <li><a href="#">Our packages</a></li>
+                    <li><a href="#">About us</a></li>
+               
+               
+                </ul>
+                
+    
+            </div>
+           <div>
+
+
+        <?php include_once "component/navbar.php"; ?>
+       <div>
+        
+    <div class="form">
+        <h4>Sign into your account</h4>
+            <div class="login">
+                <p><?php 
+                    if(isset($_SESSION['error'])){
+                        echo $_SESSION['error'];
+                    }
+                        unset($_SESSION['error']);
+                    ?>
+                </p>
+                <form action="process/login.php" method="POST">
+                    <input type="email" name="email_address" class="input-box" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <span><button type="submit" name="employee">Login</button></span>
+                </form>
+
+                <div>
+                <a href="signup.php" class="existing-account">Don't have an account yet?</a>
+                </div>
+                
+                <div>
+                <a href="" class="password">forgot password?</a>
+                </div>
+            </div>
+
+            <div class="flex-box">Dial <span>*943#</span> <span2> for</span2><br></span>Manual <br> Registration
+
+            </div>
+            </div>
+    </div>
+    <footer>
+
+        <section class="footer">
+            <div class="wrapper">
+                <div class="logo">
+                    <img src="/IMAGES/logo.png">
+                    <div class="header-text"><span>SWIFT</span>HIRE
+                    </div> 
+                </div>
+
+                <div class="footer-features">
+                    <div class="Main">
+           <h4>Home</h4>
+            Candidates<br>
+            Employers<br>
+            How it works<br>
+            Our packages<br>
+        </div> 
+   
+
+    <div class="services">
+<h4>Services</h4>
+        About us<br>
+        Catigories<br>
+        Contact us<br>
+        FAQ<br>
+        Blogs<br>
+    </div>
+    
+    <div class="socials">
+        <h4>Social</h4>
+        <i class="fa-brands fa-twitter"></i></i><br>
+        <i class="fa-brands fa-facebook"></i><br>
+        <i class="fa-brands fa-linkedin"></i><br>
+        <i class="fa-brands fa-instagram"></i><br>
+    </div>
+   
+</div>
+<hr>
+<div class="team">
+    <h6>Powered by: Team Casablanca[CWW TECH AFRICA]</h6>
+    </div>
+</div>
+</section>
+
+    </footer>
+    
+    
+</body>
+</html>
